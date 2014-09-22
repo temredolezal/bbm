@@ -1,7 +1,7 @@
 { 
-	"catz": [
-		{ "name": "Wet Cat", "image_path": "assets/images/cat2.jpg" },
-	    { "name": "Bitey Cat", "image_path": "assets/images/cat1.jpg" },
-	    { "name": "Surprised Cat", "image_path": "assets/images/cat3.jpg" }
+	"scores": [
+		{ "game": "Diamondbacks vs. Brewers", "score": "4-3" },
+	    { "game": "Cubs vs. Giants", "score": "5-4" },
+	    { "game": "Padres vs. Dodgers", "score": "6-5" }
     ]
 }

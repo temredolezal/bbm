@@ -4,42 +4,42 @@ MyApp.addRegions({
   mainRegion: "#content"
 });
 
-AngryCat = Backbone.Model.extend({});
+SportsScore = Backbone.Model.extend({});
 
-AngryCats = Backbone.Collection.extend({
-  model: AngryCat,
+SportsScores = Backbone.Collection.extend({
+  model: SportsScore,
   url: 'data.json',
   parse: function(response){
-    return response.catz
+    return response.scores
   }
 });
 
-AngryCatView = Backbone.Marionette.ItemView.extend({
-  template: "#angry_cat-template",
+SportsScoreView = Backbone.Marionette.ItemView.extend({
+  template: "#sports_score-template",
   tagName: 'tr',
-  className: 'angry_cat'
+  className: 'sports_score'
 });
 
-AngryCatsView = Backbone.Marionette.CompositeView.extend({
+SportsScoresView = Backbone.Marionette.CompositeView.extend({
   tagName: "table",
-  id: "angry_cats",
+  id: "sports_scores",
   className: "table-striped table-bordered",
-  template: "#angry_cats-template",
-  itemView: AngryCatView,  
+  template: "#sports_scores-template",
+  itemView: SportsScoreView,  
   appendHtml: function(collectionView, itemView){
     collectionView.$("tbody").append(itemView.el);
   }
 });
 
 MyApp.addInitializer(function(options){
-  var angryCatsView = new AngryCatsView({
-    collection: options.cats
+  var sportsScoresView = new SportsScoresView({
+    collection: options.scores
   });
-  options.cats.fetch();
-  MyApp.mainRegion.show(angryCatsView);
+  options.scores.fetch();
+  MyApp.mainRegion.show(sportsScoresView);
 });
 
 $(document).ready(function(){
-  var cats = new AngryCats();
-  MyApp.start({cats: cats});
+  var scores = new SportsScores();
+  MyApp.start({scores: scores});
 });

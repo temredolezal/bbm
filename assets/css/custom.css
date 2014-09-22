@@ -1,4 +1,4 @@
-img.angry_cat_pic {
+img.sports_score_pic {
     height: 100px;
     width: 100px;
 }
@@ -9,29 +9,29 @@ img.angry_cat_pic {
     margin-right: auto;
 }
 
-#angry_cats {
+#sports_scores {
     margin-top: 30px;
 }
 
-#angry_cats .angry_cat {
+#sports_scores .sports_score {
     font-size: 20px;
     font-weight: bold;
 }
 
-#angry_cats th {
+#sports_scores th {
     font-size: 24px;
 }
 
-#angry_cats td, table#angry_cats th {
+#sports_scores td, table#sports_scores th {
     padding: 12px;
 }
 
-#angry_cats td.rank div {
+#sports_scores td.rank div {
     display: block;
     text-align: center;
 }
 
-#angry_cats .rank_up img, .rank_down img {
+#sports_scores .rank_up img, .rank_down img {
     padding: 8px;
     padding-right: 24px;
     padding-left: 24px;
@@ -43,6 +43,6 @@ img.angry_cat_pic {
     cursor: hand;
 }
 
-#angry_cats .rank_up img:hover, .rank_down img:hover {
+#sports_scores .rank_up img:hover, .rank_down img:hover {
     background-color: #ccc;
 }
