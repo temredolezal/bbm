@@ -35,7 +35,15 @@ MyApp.addInitializer(function(options){
   var sportsScoresView = new SportsScoresView({
     collection: options.scores
   });
-  options.scores.fetch();
+  options.scores.fetch({
+    success: function() {
+      console.log("fetch: success");
+      console.log(JSON.stringify(options.scores));
+    },
+    error: function() {
+      console.log("fetch: error");
+    }
+  });
   MyApp.mainRegion.show(sportsScoresView);
 });
 
